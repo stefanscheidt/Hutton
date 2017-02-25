@@ -1,0 +1,26 @@
+name: Hutton
+version: 1.0
+cabal-version: 1.11
+build-type: Simple
+license: PublicDomain
+stability: experimental
+synopsis: Exercises from Programming in Haskell
+description:
+    Exercises from Graham Hutton, Programming in Haskell, 2nd edition
+category: Exercises
+author: stefan.scheidt@icloud.com
+x-ghc-framework-version: 7.10.3-5.18-2
+x-last-ide-version: HfM1.3.2
+Executable Hutton
+  main-is: Hutton01.hs
+  buildable: True
+  build-depends:
+      base -any
+  other-modules:
+      BitStringTransmit
+      Hutton02
+      Hutton04
+      Hutton06
+      CaesarCipher
+      Hutton07
+      Hutton05

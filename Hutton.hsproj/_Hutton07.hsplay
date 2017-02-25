@@ -1,0 +1,16 @@
+-- Haskell Playground 1.0
+all_ even [2,4,6]
+any_ even [1,5,7]
+takeWhile_ even [2,4,6,7,8,9]
+dropWhile_ odd [2,4,6,7,8,9]
+
+map_ (* 2) [1,2,3,4]
+filter_ even [1,2,3,4,5,6]
+
+dec2int [2, 3, 4, 5, 6, 7]
+
+let f = \(x, y) -> x*x + y*y
+let cf = curry_ f
+cf 2 4
+
+take 5 $ uf_iterate (*2) 1

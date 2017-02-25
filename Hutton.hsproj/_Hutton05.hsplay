@@ -1,0 +1,24 @@
+-- Haskell Playground 1.0
+factors 7
+
+isPrime 123
+
+primes 123
+
+grid 1 2
+
+square 2
+
+myReplicate 3 True
+
+pyths 10
+
+perfects 500
+
+perfects 500
+
+[(x,y) | x <- [1,2], y <- [3,4]]
+
+concat [[(x,y) | y <- [3,4]] | x <- [1,2]]
+
+scalarproduct [1,2,3] [4,5,6]
