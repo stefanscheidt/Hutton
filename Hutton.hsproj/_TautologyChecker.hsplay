@@ -1,0 +1,14 @@
+-- Haskell Playground 1.0
+bools 3
+
+let p = (Var 'A' `And` Var 'B') `Imply` (Var 'A')
+
+vars p
+
+substs p
+
+isTaut p
+
+let q = Var 'A' `Imply` (Var 'A' `And` Var 'B')
+
+isTaut q

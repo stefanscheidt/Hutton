@@ -1,6 +1,2 @@
 -- Haskell Playground 1.0
 altMap (+10) (+100) [1,2,3]
-
-int2digits 5232534141433059
-
-luhn 5232534141433059
