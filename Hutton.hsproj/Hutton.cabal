@@ -21,6 +21,7 @@ Executable Hutton
       Hutton02
       Hutton04
       Hutton06
+      AbstractMachine
       CaesarCipher
       TautologyChecker
       Hutton07
