@@ -1,0 +1,19 @@
+-- Haskell Playground 1.0
+nat2int Zero
+nat2int (Succ (Succ (Succ Zero)))
+
+int2nat 2
+
+nat2int $ add (int2nat 2) (int2nat 3)
+
+nat2int $ mult (int2nat 2) (int2nat 3)
+
+let btree = BNode (BNode (BLeaf 1) (BNode (BLeaf 2) (BLeaf 3))) (BLeaf 4)
+
+balanced btree
+
+balance [1,2,3,4]
+
+let expr = ((Val 2) `Add` ((Val 3) `Add` (Val 4)))
+eval expr
+size expr

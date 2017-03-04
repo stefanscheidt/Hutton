@@ -1,5 +1,15 @@
 module AbstractMachine where
 
+{-
+
+# Todo
+
+Solve exercise 9 from ch. 8:
+
+Extend the abstract machine to support the use of multiplication.
+
+-}
+
 -- Expressions
 data Expr
   = Val Int
@@ -12,7 +22,10 @@ data Expr
 -}
 
 -- Control Stack
-data Op = EVAL Expr | ADD Int
+data Op
+  = EVAL Expr
+  | ADD Int
+  
 type Cont = [Op]
 
 -- execute a control stack for an integer

@@ -1,14 +1,15 @@
 -- Haskell Playground 1.0
-bools 3
+let p1 = ((Var 'A') `And` (Var 'B')) `Imply` (Var 'A')
+isTaut p1
 
-let p = (Var 'A' `And` Var 'B') `Imply` (Var 'A')
+let p2 = ((Var 'A') `Or` (Var 'B')) `Imply` (Var 'A')
+isTaut p2
 
-vars p
+let p3 = (Var 'A') `Imply` ((Var 'A') `Or` (Var 'B'))
+isTaut p3
 
-substs p
-
-isTaut p
-
-let q = Var 'A' `Imply` (Var 'A' `And` Var 'B')
-
-isTaut q
+let p4'  = (Not ((Var 'A') `And` (Var 'B')))
+let p4'' = ((Not (Var 'A')) `Or` (Not (Var 'B')))
+let p4 = p4' `Equiv` p4''
+p4
+isTaut p4
