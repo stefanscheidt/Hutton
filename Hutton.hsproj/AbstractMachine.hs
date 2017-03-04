@@ -1,43 +1,39 @@
 module AbstractMachine where
 
-{-
-
-# Todo
-
-Solve exercise 9 from ch. 8:
-
-Extend the abstract machine to support the use of multiplication.
-
--}
-
 -- Expressions
 data Expr
   = Val Int
   | Add Expr Expr
+  | Mult Expr Expr
 
 {-
   Abstract Machine,
   being either in state expression evaluation
-  or in state integer addition
+  or in state operand application
 -}
 
--- Control Stack
+-- Operand
+type Oper = (Int -> Int -> Int)
+
+-- Operation
 data Op
-  = EVAL Expr
-  | ADD Int
+  = EVAL Oper Expr
+  | APLY Oper Int
   
+-- Control Stack
 type Cont = [Op]
 
 -- execute a control stack for an integer
 exec :: Cont -> Int -> Int
 exec [] n = n
-exec (EVAL y : c) n = eval y (ADD n : c)
-exec (ADD m : c) n  = exec c (m + n)
+exec (EVAL p y : c) n = eval y (APLY p n : c)
+exec (APLY p m : c) n  = exec c (p m n)
 
 -- controlled evaluation of an expression
 eval :: Expr -> Cont -> Int
 eval (Val n) c   = exec c n
-eval (Add x y) c = eval x (EVAL y : c)
+eval (Add x y) c = eval x (EVAL (+) y : c)
+eval (Mult x y) c = eval x (EVAL (*) y : c)
 
 -- evaluate an expression
 value :: Expr -> Int

@@ -1,0 +1,12 @@
+-- Haskell Playground 1.0
+let e0 = (Val 2)
+value e0
+
+let e1 = (Val 2) `Add` (Val 3)
+value e1
+
+let e2 = (Val 2) `Mult` (Val 3)
+value e2
+
+let e3 = ((Val 2) `Mult` (Val 3)) `Add` (Val 4)
+value e3
