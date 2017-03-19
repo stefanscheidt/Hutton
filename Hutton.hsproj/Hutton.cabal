@@ -12,18 +12,20 @@ author: stefan.scheidt@icloud.com
 x-ghc-framework-version: 7.10.3-5.18-2
 x-last-ide-version: HfM1.3.2
 Executable Hutton
-  main-is: Hutton01.hs
+  main-is: Main.hs
   buildable: True
   build-depends:
       base -any
   other-modules:
+      CountdownProblem
       BitStringTransmit
-      Hutton02
-      Hutton04
-      Hutton06
-      AbstractMachine
       CaesarCipher
       TautologyChecker
+      Hutton05
+      Hutton01
+      Hutton02
+      Hutton06
+      Hutton04
+      AbstractMachine
       Hutton07
       Hutton08
-      Hutton05

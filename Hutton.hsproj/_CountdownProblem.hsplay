@@ -1,0 +1,27 @@
+-- Haskell Playground 1.0
+let expr = App Add (Val 1) (App Mul (Val 2) (Val 3))
+expr
+
+values expr
+
+eval expr
+
+subs $ values expr
+
+interleave 4 [1,2,3]
+
+perms [1,2,3]
+
+choices [1,2,3]
+
+let e = App Mul (App Add (Val 1) (Val 50)) (App Sub (Val 25) (Val 10))
+e
+solution e [1,3,7,10,25,50] 765
+
+split [1,2,3,4]
+
+exprs [1,2,3]
+
+solutions [1,2,3] 6
+
+solutions' [1,2,3] 6
