@@ -76,6 +76,20 @@ perms (x:xs) = concat (map (interleave x) (perms xs))
 choices :: [a] -> [[a]]
 choices = concat . map perms . subs
 
+-- alternative way to define choices (Ex. 9.1)
+choices' :: [a] -> [[a]]
+choices' xs = [zs | ys <- subs xs, zs <- perms ys]
+
+-- Ex. 9.2
+rmFst :: Eq a => a -> [a] -> [a]
+rmFst x []     = []
+rmFst x (y:ys) = if x == y then ys else y : rmFst x ys
+
+isChoice :: Eq a => [a] -> [a] -> Bool
+isChoice []     _  = True
+isChoice (x:xs) [] = False
+isChoice (x:xs) ys = elem x ys && isChoice xs (rmFst x ys)
+
 -- a solution for the countdown problem?
 solution :: Expr -> [Int] -> Int -> Bool
 solution e ns n = elem (values e) (choices ns) && eval e == [n]

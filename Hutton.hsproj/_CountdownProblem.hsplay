@@ -14,6 +14,13 @@ perms [1,2,3]
 
 choices [1,2,3]
 
+choices' [1,2,3]
+
+rmFst 1 [2, 3, 4]
+rmFst 1 [2, 1, 3, 1, 4]
+
+isChoice [3, 2] [1, 2, 3]
+
 let e = App Mul (App Add (Val 1) (Val 50)) (App Sub (Val 25) (Val 10))
 e
 solution e [1,3,7,10,25,50] 765
