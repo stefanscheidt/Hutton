@@ -9,8 +9,8 @@ description:
     Exercises from Graham Hutton, Programming in Haskell, 2nd edition
 category: Exercises
 author: stefan.scheidt@icloud.com
-x-ghc-framework-version: 7.10.3-5.18-2
-x-last-ide-version: HfM1.3.2
+x-ghc-framework-version: 7.10.3-6.29-1
+x-last-ide-version: HfM1.4.0
 Executable Hutton
   main-is: Main.hs
   buildable: True
