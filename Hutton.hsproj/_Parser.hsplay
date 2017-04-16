@@ -1,0 +1,10 @@
+-- Haskell Playground 1.0
+parse item []
+parse item "abc"
+
+parse (fmap toUpper item) "abc"
+
+parse (pure 1) "abc"
+
+parse three "abcdef"
+
